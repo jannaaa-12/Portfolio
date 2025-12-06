@@ -7,7 +7,7 @@
   <!-- Makes the page responsive on phones and laptops -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Minecraft-style pixel font for titles -->
+  <!-- Pixel / Minecraft-style font for headings -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
   <!-- External stylesheet -->
@@ -25,34 +25,45 @@
       <a href="#video30mff">30MFF Video</a>
       <a href="#comic">Comic Project</a>
       <a href="#sound">Sound Project</a>
-      <a href="#film">Video Project</a>
+      <a href="#film">Film Project</a>
     </nav>
   </header>
 
   <main>
 
-    <!-- HOME SECTION: Main portfolio title, image, and short intro -->
+    <!-- HOME SECTION: Main 3D title, combined card with image + intro, and metadata line -->
     <section id="home" class="full-section">
       <div class="container">
 
-        <!-- Large Minecraft-style title at the top of the home page -->
+        <!-- Large Minecraft-style main title at the top of the page -->
         <h1 class="main-title minecraft-heading">PORTFOLIO</h1>
 
-        <!-- Layout wrapper for portrait image and intro text -->
-        <div class="section-inner home-inner">
-          <div class="home-photo">
-            <img src="Media/me.png" alt="Portrait" />
-          </div>
+        <!-- Main home card containing the portrait and introduction text -->
+        <div class="home-card card">
+          <div class="home-card-inner">
 
-          <div class="home-text card">
-            <h2 class="section-title">Communications Lab Portfolio</h2>
-            <p>
-              This website is my portfolio for the Fall Communications Lab course. It gathers my four main projects in one Minecraft-inspired space: a 30MFF video, an interactive comic, a sound project, and a short film.
-            </p>
-            <p>
-              Each section includes a short description, a direct link to the project, and extra behind-the-scenes content. Scroll down, follow the chicken on the right, and explore how each assignment shaped my creative and technical skills.
-            </p>
+            <!-- Square portrait inside the card on the left -->
+            <div class="home-card-image">
+              <img src="Media/me.png" alt="Portrait" />
+            </div>
+
+            <!-- Introductory text about the portfolio on the right -->
+            <div class="home-card-copy">
+              <h2 class="section-title minecraft-heading">COMMUNICATIONS LAB PORTFOLIO</h2>
+              <p>
+                My name is Jana Mohsen, this is my portfolio for the Communication Lab class. It gathers my four main projects in one Minecraft-inspired space: a 30MFF video, an interactive comic, a sound project, and a short film.
+              </p>
+              <p>
+                Each section includes a short description, a direct link to the project, and extra behind-the-scenes content. Scroll down, follow the chicken on the right, and explore how each assignment shaped my creative and technical skills.
+              </p>
+            </div>
+
           </div>
+        </div>
+
+        <!-- Simple line identifying the assignment details under the home card -->
+        <div class="home-meta">
+          Jana Mohsen · jam9879 · Assignment 5
         </div>
       </div>
     </section>
@@ -61,7 +72,7 @@
     <section id="video30mff" class="full-section">
       <div class="container">
 
-        <!-- Centered Minecraft-style project title -->
+        <!-- Centered Minecraft-style project title above the content -->
         <h2 class="project-title minecraft-heading">30MFF VIDEO PROJECT</h2>
 
         <!-- Side-by-side layout for visual and description -->
@@ -77,7 +88,7 @@
           </div>
         </div>
 
-        <!-- Separate link box underneath the main content -->
+        <!-- Separate box under the section containing the project link -->
         <div class="project-link-wrapper">
           <a class="project-link" href="https://jannaaa-12.github.io/Assignment1/#home" target="_blank" rel="noopener">
             View 30MFF Website
@@ -173,12 +184,12 @@
       </div>
     </section>
 
-    <!-- VIDEO / MATCHA PROJECT SECTION: Title, description, diamond BTS layout, and link -->
+    <!-- FILM PROJECT SECTION: Title, description, diamond BTS layout, and link -->
     <section id="film" class="full-section">
       <div class="container">
 
         <!-- Centered Minecraft-style project title -->
-        <h2 class="project-title minecraft-heading">VIDEO PROJECT</h2>
+        <h2 class="project-title minecraft-heading">FILM PROJECT</h2>
 
         <!-- Layout including diamond BTS images and description -->
         <div class="section-inner">
@@ -202,7 +213,7 @@
         <!-- External link to the matcha film website -->
         <div class="project-link-wrapper">
           <a class="project-link" href="https://khatirak.github.io/film_assignment/" target="_blank" rel="noopener">
-            View Video Website
+            View Film Website
           </a>
         </div>
       </div>
