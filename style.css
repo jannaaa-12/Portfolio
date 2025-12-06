@@ -1,0 +1,288 @@
+/* ============================================================
+   GENERAL GLOBAL SETTINGS
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth scrolling between sections */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Minecraft background + universal font */
+body {
+  font-family: system-ui, sans-serif;
+  color: #f4f4f4;
+  background: url("Media/Background.jpeg") center/cover fixed no-repeat;
+  line-height: 1.6;
+}
+
+/* Dark overlay above background to make text readable */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+/* Link color (Minecraft green) */
+a {
+  color: #a4ff81;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Main width container for layout */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+/* ============================================================
+   NAVIGATION BAR
+   ============================================================ */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(10, 10, 10, 0.9);
+  border-bottom: 4px solid #4caf50;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Highlight nav item on hover */
+nav a {
+  padding: 0.4rem 0.7rem;
+  border: 2px solid transparent;
+}
+
+nav a:hover {
+  border-color: #4caf50;
+  background: rgba(76, 175, 80, 0.15);
+}
+
+/* ============================================================
+   SECTION LAYOUT
+   ============================================================ */
+
+main {
+  padding-top: 4.5rem;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.section-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Reusable card style for text blocks */
+.card {
+  background: rgba(15, 15, 15, 0.85);
+  border: 3px solid #4caf50;
+  padding: 1.5rem;
+  box-shadow: 0 0 0 3px #1b3b1d;
+}
+
+/* Text column */
+.project-text {
+  flex: 1 1 320px;
+}
+
+/* Image column */
+.project-media {
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Every image in the project sections */
+.project-media img {
+  max-width: 100%;
+  border: 3px solid #4caf50;
+  box-shadow: 0 0 0 3px #1b3b1d;
+}
+
+/* Button for project links */
+.project-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: 3px solid #4caf50;
+  background: #1d3d21;
+  font-weight: 600;
+}
+
+.project-link:hover {
+  background: #2e6b36;
+}
+
+/* ============================================================
+   HOME SECTION
+   ============================================================ */
+
+.home-photo img {
+  width: 100%;
+  max-width: 320px;
+  border: 3px solid #4caf50;
+  box-shadow: 0 0 0 3px #1b3b1d;
+}
+
+/* ============================================================
+   COMIC GRID (4 images)
+   ============================================================ */
+
+.comic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* ============================================================
+   CUSTOM AUDIO PLAYER (Bloopers)
+   ============================================================ */
+
+.bloopers-panel {
+  width: 100%;
+  max-width: 500px;
+  padding: 1.8rem;
+  background-image: url("Media/Background1.png");
+  background-size: cover;
+  border: 3px solid #4caf50;
+  position: relative;
+  box-shadow: 0 0 0 3px #1b3b1d;
+}
+
+/* Darken background for readability */
+.bloopers-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.bloopers-content {
+  position: relative;
+  z-index: 2;
+}
+
+.bloopers-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Custom progress bar */
+.audio-bar {
+  height: 18px;
+  border: 2px solid #a4ff81;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.audio-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: #a4ff81;
+}
+
+/* Buttons */
+.btn-round {
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: 3px solid #4caf50;
+  background: #1d3d21;
+  font-weight: 600;
+}
+
+.btn-round:hover {
+  background: #2e6b36;
+}
+
+audio {
+  display: none;
+}
+
+/* ============================================================
+   BEHIND THE SCENES (MATCHA FILM IMAGES)
+   ============================================================ */
+
+.bts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* ============================================================
+   FLOATING MINECRAFT CHICKEN
+   ============================================================ */
+
+.chicken-helper {
+  position: fixed;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  image-rendering: pixelated;
+  animation: float 3s ease-in-out infinite alternate;
+  z-index: 200;
+}
+
+@keyframes float {
+  from { transform: translateY(-50%) translateY(-6px); }
+  to { transform: translateY(-50%) translateY(6px); }
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .section-inner {
+    flex-direction: column;
+  }
+  .chicken-helper {
+    width: 60px;
+    bottom: 12px;
+    top: auto;
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .comic-grid,
+  .bts-grid {
+    grid-template-columns: 1fr;
+  }
+}
