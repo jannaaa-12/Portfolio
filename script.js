@@ -41,7 +41,7 @@ const chicken = document.getElementById("chicken-helper");
 // List of all sections so the chicken can jump to the next one when clicked
 const sections = Array.from(document.querySelectorAll("main section"));
 
-// Helper to smoothly scroll to a specific vertical position
+/* Helper to smoothly scroll to a specific vertical position */
 function smoothScrollTo(y) {
   window.scrollTo({
     top: y,
@@ -49,18 +49,17 @@ function smoothScrollTo(y) {
   });
 }
 
-// Update the chicken's vertical position so it reflects the scroll position
+/* Update the chicken's vertical position so it reflects the scroll position */
 function updateChickenPosition() {
   const scrollTop = window.scrollY || window.pageYOffset;
   const docHeight = document.documentElement.scrollHeight;
   const winHeight = window.innerHeight;
 
-  // Avoid division by zero for very short pages
   const scrollable = Math.max(docHeight - winHeight, 1);
   const ratio = scrollTop / scrollable;
 
-  const minOffset = 60; // minimum distance from top
-  const maxOffset = winHeight - 60; // distance from bottom
+  const minOffset = 60;
+  const maxOffset = winHeight - 60;
   const newTop = minOffset + (maxOffset - minOffset) * ratio;
 
   chicken.style.top = `${newTop}px`;
@@ -72,7 +71,7 @@ window.addEventListener("scroll", updateChickenPosition);
 // Initial position when the page loads
 window.addEventListener("load", updateChickenPosition);
 
-// When the chicken is clicked, scroll smoothly to the next section
+/* When the chicken is clicked, scroll smoothly to the next section */
 chicken.addEventListener("click", () => {
   const currentScroll = window.scrollY || window.pageYOffset;
   let nextSectionTop = null;
