@@ -1,38 +1,39 @@
 /* ============================================================
-   GENERAL GLOBAL SETTINGS
+   GLOBAL SETTINGS AND BACKGROUND
    ============================================================ */
 
+/* Basic reset for spacing and box sizing */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Smooth scrolling between sections */
+/* Smooth scrolling when clicking nav links */
 html {
   scroll-behavior: smooth;
 }
 
-/* Minecraft background + universal font */
+/* Main background and base font */
 body {
   font-family: system-ui, sans-serif;
-  color: #f4f4f4;
+  color: #102a43;
   background: url("Media/Background.jpeg") center/cover fixed no-repeat;
   line-height: 1.6;
 }
 
-/* Dark overlay above background to make text readable */
+/* Light overlay over the background for readability */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(255, 255, 255, 0.3);
   z-index: -1;
 }
 
-/* Link color (Minecraft green) */
+/* Default link color in a light green tone */
 a {
-  color: #a4ff81;
+  color: #15803d;
   text-decoration: none;
 }
 
@@ -40,10 +41,10 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Main width container for layout */
+/* Central column for all content */
 .container {
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 1.5rem;
 }
 
@@ -51,238 +52,379 @@ a:hover {
    NAVIGATION BAR
    ============================================================ */
 
+/* Fixed navigation bar at the top */
 header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(10, 10, 10, 0.9);
-  border-bottom: 4px solid #4caf50;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 3px solid #22c55e;
   z-index: 100;
 }
 
+/* Navigation item layout */
 nav {
   display: flex;
-  gap: 2rem;
   justify-content: center;
+  align-items: center;
+  gap: 2rem;
   padding: 0.75rem 1rem;
-  text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #166534;
 }
 
-/* Highlight nav item on hover */
+/* Highlight each menu item on hover */
 nav a {
   padding: 0.4rem 0.7rem;
+  border-radius: 999px;
   border: 2px solid transparent;
+  color: #166534;
 }
 
 nav a:hover {
-  border-color: #4caf50;
-  background: rgba(76, 175, 80, 0.15);
+  border-color: #16a34a;
+  background: #bbf7d0;
 }
 
 /* ============================================================
    SECTION LAYOUT
    ============================================================ */
 
-main {
-  padding-top: 4.5rem;
+/* Gives each section enough height to almost fill the screen */
+.full-section {
+  min-height: 100vh;
+  padding: 6rem 0 5rem;
+  display: flex;
+  align-items: center;
 }
 
-section {
-  padding: 4rem 0;
-}
-
+/* Wrapper for side-by-side content inside sections */
 .section-inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
   gap: 2rem;
 }
 
+/* Main descriptive titles inside cards */
 .section-title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
-/* Reusable card style for text blocks */
+/* Reusable white card for text blocks */
 .card {
-  background: rgba(15, 15, 15, 0.85);
-  border: 3px solid #4caf50;
-  padding: 1.5rem;
-  box-shadow: 0 0 0 3px #1b3b1d;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  border: 3px solid #22c55e;
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.18);
+  padding: 1.8rem;
 }
 
-/* Text column */
+/* Column for project text */
 .project-text {
   flex: 1 1 320px;
+  min-width: 0;
 }
 
-/* Image column */
+/* Column for project images and visuals */
 .project-media {
   flex: 1 1 320px;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for all project visuals */
+.project-media img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 3px solid #22c55e;
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.18);
+  background: #f9fafb;
+}
+
+/* Paragraph spacing in cards */
+p {
+  margin-bottom: 0.8rem;
+}
+
+/* ============================================================
+   HOME PAGE LAYOUT
+   ============================================================ */
+
+/* Home-specific flex layout */
+.home-inner {
+  margin-top: 2rem;
+}
+
+/* Larger centered image on the home page */
+.home-photo {
+  flex: 0 1 360px;
   display: flex;
   justify-content: center;
 }
 
-/* Every image in the project sections */
-.project-media img {
-  max-width: 100%;
-  border: 3px solid #4caf50;
-  box-shadow: 0 0 0 3px #1b3b1d;
+.home-photo img {
+  width: 100%;
+  max-width: 360px;
 }
 
-/* Button for project links */
+/* Introductory text card on the home page */
+.home-text {
+  flex: 1 1 380px;
+}
+
+/* Main Minecraft-style title centered on the home page */
+.main-title {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 2.4rem;
+  color: #14532d;
+}
+
+/* Font style for Minecraft-like headings */
+.minecraft-heading {
+  font-family: "Press Start 2P", system-ui, sans-serif;
+}
+
+/* Centered project titles above each section */
+.project-title {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  color: #166534;
+}
+
+/* ============================================================
+   PROJECT LINK BUTTONS
+   ============================================================ */
+
+/* Wrapper to center project links under the section content */
+.project-link-wrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Button that links to the external project page */
 .project-link {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  border: 3px solid #4caf50;
-  background: #1d3d21;
-  font-weight: 600;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  border: 3px solid #22c55e;
+  background: #ffffff;
+  color: #166534;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .project-link:hover {
-  background: #2e6b36;
+  background: #22c55e;
+  color: #f9fafb;
+  text-decoration: none;
 }
 
 /* ============================================================
-   HOME SECTION
+   DIAMOND IMAGE GRID (COMIC + FILM)
    ============================================================ */
 
-.home-photo img {
-  width: 100%;
-  max-width: 320px;
-  border: 3px solid #4caf50;
-  box-shadow: 0 0 0 3px #1b3b1d;
-}
-
-/* ============================================================
-   COMIC GRID (4 images)
-   ============================================================ */
-
-.comic-grid {
+/* Base grid that forms a diamond layout with four images */
+.diamond-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, minmax(90px, 1fr));
+  grid-template-rows: repeat(3, auto);
   gap: 1rem;
 }
 
+/* All items share the same basic look */
+.diamond-item {
+  border-radius: 10px;
+}
+
+/* Top image in the diamond */
+.diamond-item-1 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+/* Left middle image */
+.diamond-item-2 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+/* Right middle image */
+.diamond-item-3 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+/* Bottom image in the diamond */
+.diamond-item-4 {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
 /* ============================================================
-   CUSTOM AUDIO PLAYER (Bloopers)
+   BLOOPERS PANEL (SOUND PROJECT)
    ============================================================ */
 
+/* Main container for the bloopers image and controls */
 .bloopers-panel {
   width: 100%;
-  max-width: 500px;
-  padding: 1.8rem;
-  background-image: url("Media/Background1.png");
-  background-size: cover;
-  border: 3px solid #4caf50;
-  position: relative;
-  box-shadow: 0 0 0 3px #1b3b1d;
-}
-
-/* Darken background for readability */
-.bloopers-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-}
-
-.bloopers-content {
-  position: relative;
-  z-index: 2;
-}
-
-.bloopers-title {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-/* Custom progress bar */
-.audio-bar {
-  height: 18px;
-  border: 2px solid #a4ff81;
-  border-radius: 999px;
-  margin-bottom: 1.5rem;
+  max-width: 600px;
+  border-radius: 10px;
+  border: 3px solid #22c55e;
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.18);
+  background: #ffffff;
   overflow: hidden;
 }
 
-.audio-bar-fill {
-  height: 100%;
-  width: 0%;
-  background: #a4ff81;
+/* Image shown at the top of the bloopers card */
+.bloopers-image {
+  width: 100%;
+  display: block;
 }
 
-/* Buttons */
+/* Control area underneath the image */
+.bloopers-controls {
+  padding: 1.4rem 1.5rem 1.8rem;
+  background: #f9fafb;
+}
+
+/* Bloopers label above the audio bar */
+.bloopers-title {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #166534;
+}
+
+/* Simple audio progress bar container */
+.audio-bar {
+  height: 16px;
+  border-radius: 999px;
+  border: 2px solid #22c55e;
+  margin: 0 0 1.5rem;
+  position: relative;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+/* Filled part of the progress bar that grows as the audio plays */
+.audio-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background: #22c55e;
+}
+
+/* Buttons to control playback */
+.bloopers-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Rounded buttons used for play/pause */
 .btn-round {
   padding: 0.6rem 1.4rem;
   border-radius: 999px;
-  border: 3px solid #4caf50;
-  background: #1d3d21;
-  font-weight: 600;
+  border: 3px solid #22c55e;
+  background: #ffffff;
+  color: #166534;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .btn-round:hover {
-  background: #2e6b36;
+  background: #22c55e;
+  color: #f9fafb;
 }
 
+/* Hide default audio controls to use custom buttons */
 audio {
   display: none;
 }
 
 /* ============================================================
-   BEHIND THE SCENES (MATCHA FILM IMAGES)
+   FLOATING MINECRAFT CHICKEN (SCROLL INDICATOR)
    ============================================================ */
 
-.bts-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-/* ============================================================
-   FLOATING MINECRAFT CHICKEN
-   ============================================================ */
-
+/* Chicken indicator positioned on the right, moved with JS */
 .chicken-helper {
   position: fixed;
   right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 70px;
-  image-rendering: pixelated;
-  animation: float 3s ease-in-out infinite alternate;
+  top: 10%;
+  width: 90px;
+  max-width: 20vw;
   z-index: 200;
-}
-
-@keyframes float {
-  from { transform: translateY(-50%) translateY(-6px); }
-  to { transform: translateY(-50%) translateY(6px); }
+  image-rendering: pixelated;
+  cursor: pointer;
 }
 
 /* ============================================================
    RESPONSIVE DESIGN
    ============================================================ */
 
+/* Tablet / small laptop adjustments */
 @media (max-width: 900px) {
+  nav {
+    gap: 1rem;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+  }
+
   .section-inner {
     flex-direction: column;
+    align-items: stretch;
   }
+
+  .home-photo {
+    justify-content: center;
+  }
+
   .chicken-helper {
-    width: 60px;
-    bottom: 12px;
-    top: auto;
-    transform: none;
+    width: 80px;
   }
 }
 
+/* Phone layout adjustments */
 @media (max-width: 600px) {
-  .comic-grid,
-  .bts-grid {
-    grid-template-columns: 1fr;
+  .full-section {
+    padding: 5.5rem 0 4.5rem;
+  }
+
+  .main-title {
+    font-size: 1.7rem;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .diamond-grid {
+    grid-template-columns: repeat(3, minmax(70px, 1fr));
+  }
+
+  .chicken-helper {
+    right: 6px;
   }
 }
