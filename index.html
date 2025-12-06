@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Communications Lab Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Minecraft chicken that follows the scroll -->
+  <img src="Media/Chicken.png" alt="Minecraft chicken" class="chicken-helper" />
+
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#video30mff">30MFF Video</a>
+      <a href="#comic">Comic Project</a>
+      <a href="#sound">Sound Project</a>
+      <a href="#film">Video Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home section -->
+    <section id="home">
+      <div class="container section-inner">
+        <div class="home-photo">
+          <img src="Media/me.png" alt="Portrait" />
+        </div>
+        <div class="home-text card">
+          <h1 class="section-title">Communications Lab Portfolio</h1>
+          <p>
+            This website is my portfolio for the Fall Communications Lab course. It gathers my four main projects in one Minecraft-inspired space: a 30MFF video, an interactive comic, a sound project, and a short film.
+          </p>
+          <p>
+            Each section includes a short description, a direct link to the project, and a small peek behind the scenes through images or audio extras. Scroll down, follow the chicken, and explore how each assignment pushed my storytelling and technical skills in a different direction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 30MFF Video section -->
+    <section id="video30mff">
+      <div class="container section-inner">
+        <div class="project-text card">
+          <h2 class="section-title">30MFF Video Project</h2>
+          <p>
+            “My 30MFF Film” follows a casual walk of a senior student at NYUAD between classes, capturing the raw perspective of daily life and how an ordinary convenience-store stop becomes a moment of reset. The filming intentionally adopts a laid-back, unpolished style to reflect the spontaneity of the experience, inviting the viewer into a personal and contemplative moment.
+          </p>
+          <a class="project-link" href="https://jannaaa-12.github.io/Assignment1/#home" target="_blank" rel="noopener">
+            View 30MFF Website
+          </a>
+        </div>
+        <div class="project-media">
+          <img src="Media/30MFF.png" alt="30MFF video still" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Comic Project section -->
+    <section id="comic">
+      <div class="container section-inner">
+        <div class="project-text card">
+          <h2 class="section-title">Comic Project</h2>
+          <p>
+            The interactive comic “Wally’s Adventure” begins when Wally is sent to the store for nuts and finds a mysterious note that sends him into a choose-your-own-path experience. Through simple yes-or-no decisions, the story transforms an everyday errand into an unexpected journey, allowing the reader to shape how the narrative unfolds.
+          </p>
+          <a class="project-link" href="https://khatirak.github.io/comic_assignment/comic.html" target="_blank" rel="noopener">
+            View Comic Website
+          </a>
+        </div>
+        <div class="project-media">
+          <div class="comic-grid">
+            <img src="Media/2.png" alt="Comic panel 1" />
+            <img src="Media/5b3.png" alt="Comic panel 2" />
+            <img src="Media/5a2a.png" alt="Comic panel 3" />
+            <img src="Media/5b3a.png" alt="Comic panel 4" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sound Project section -->
+    <section id="sound">
+      <div class="container section-inner">
+        <div class="project-text card">
+          <h2 class="section-title">Sound Project</h2>
+          <p>
+            “Girl Talk: Real Conversations, Real Women” is a podcast-style sound project that creates a safe space for honest, unfiltered discussions about life, careers, and everyday challenges women face. The project aims to feel like a supportive friend who keeps it real, with episodes such as “Girl Math” and “Pink Tax” blending personal experience with light social commentary.
+          </p>
+          <a class="project-link" href="https://sma9389.github.io/Sound-Project/" target="_blank" rel="noopener">
+            View Sound Project
+          </a>
+        </div>
+
+        <div class="project-media">
+          <div class="bloopers-panel">
+            <div class="bloopers-overlay"></div>
+            <div class="bloopers-content">
+              <h3 class="bloopers-title">Bloopers</h3>
+              <div class="audio-bar">
+                <div class="audio-bar-fill" id="audio-progress"></div>
+              </div>
+              <div class="bloopers-buttons">
+                <button class="btn-round" id="play-btn">Play</button>
+                <button class="btn-round" id="pause-btn">Pause</button>
+              </div>
+              <audio id="bloopers-audio" src="Media/Bloopers.mp3"></audio>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Film / Video Project section -->
+    <section id="film">
+      <div class="container section-inner">
+        <div class="project-text card">
+          <h2 class="section-title">Video Project</h2>
+          <p>
+            “Matcha Story: The Story of a Perfect Matcha Latte” documents the process of crafting the ideal matcha latte, from the origins of the matcha to its preparation and final presentation. Through simple visuals and narrative, the project highlights the ritual and sensory details that make the drink feel like a calm, intentional moment in a busy day.
+          </p>
+          <a class="project-link" href="https://khatirak.github.io/film_assignment/" target="_blank" rel="noopener">
+            View Video Website
+          </a>
+        </div>
+        <div class="project-media">
+          <div class="bts-grid">
+            <img src="Media/BTS1.png" alt="Behind the scenes 1" />
+            <img src="Media/BTS2.png" alt="Behind the scenes 2" />
+            <img src="Media/BTS3.png" alt="Behind the scenes 3" />
+            <img src="Media/BTS4.png" alt="Behind the scenes 4" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
