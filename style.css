@@ -102,6 +102,11 @@ nav a:hover {
   align-items: center;
 }
 
+/* Extra positioning for sections that have the running chicken */
+.project-section {
+  position: relative;
+}
+
 /* Wrapper for side-by-side content inside sections */
 .section-inner {
   display: flex;
@@ -270,10 +275,10 @@ p {
 /* Base grid that forms a diamond layout with four images */
 .diamond-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(140px, 1fr));
+  grid-template-columns: repeat(3, minmax(170px, 1fr));
   grid-template-rows: repeat(3, auto);
-  gap: 0.6rem;
-  max-width: 520px;
+  gap: 0.7rem;
+  max-width: 640px;
 }
 
 /* All items share the same basic look */
@@ -283,16 +288,18 @@ p {
   box-shadow: 0 16px 30px rgba(15, 23, 42, 0.18);
 }
 
-/* Top image in the diamond */
+/* Top image in the diamond, slightly lowered */
 .diamond-item-1 {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  transform: translateY(18px);
 }
 
-/* Left middle image */
+/* Left middle image, also lowered */
 .diamond-item-2 {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  transform: translateY(18px);
 }
 
 /* Right middle image */
@@ -411,6 +418,28 @@ audio {
   cursor: pointer;
 }
 
+/* Running chicken2 above each project section */
+.chicken-runner {
+  position: absolute;
+  top: 5.4rem;
+  left: 8%;
+  width: 110px;
+  max-width: 22vw;
+  image-rendering: pixelated;
+  pointer-events: none;
+  animation: chicken-run 4s linear infinite alternate;
+}
+
+/* Horizontal back-and-forth animation for chicken2 */
+@keyframes chicken-run {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(70%);
+  }
+}
+
 /* ============================================================
    RESPONSIVE DESIGN
    ============================================================ */
@@ -438,12 +467,18 @@ audio {
   }
 
   .diamond-grid {
-    grid-template-columns: repeat(3, minmax(110px, 1fr));
-    max-width: 440px;
+    grid-template-columns: repeat(3, minmax(130px, 1fr));
+    max-width: 540px;
   }
 
   .chicken-helper {
     width: 120px;
+  }
+
+  .chicken-runner {
+    top: 5.8rem;
+    left: 12%;
+    width: 95px;
   }
 }
 
@@ -470,8 +505,8 @@ audio {
   }
 
   .diamond-grid {
-    grid-template-columns: repeat(3, minmax(85px, 1fr));
-    max-width: 360px;
+    grid-template-columns: repeat(3, minmax(95px, 1fr));
+    max-width: 420px;
   }
 
   .home-card-image img {
@@ -482,5 +517,11 @@ audio {
   .chicken-helper {
     right: 6px;
     width: 110px;
+  }
+
+  .chicken-runner {
+    top: 5.9rem;
+    left: 10%;
+    width: 85px;
   }
 }
