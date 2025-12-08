@@ -1,41 +1,61 @@
-/* ------------------------------
-   SCROLL CHICKEN FOLLOW
---------------------------------*/
+// =========================================
+// SCROLL CHICKEN MOVEMENT
+// =========================================
 
+// Moves the chicken up and down depending on scroll position
 const scrollChicken = document.getElementById("scrollChicken");
 
 window.addEventListener("scroll", () => {
-  let scrollPos = window.scrollY;
-  let screenHeight = window.innerHeight;
-  let docHeight = document.documentElement.scrollHeight;
+  const scrollY = window.scrollY || window.pageYOffset;
+  const docHeight = document.documentElement.scrollHeight;
+  const winHeight = window.innerHeight;
+  const scrollable = Math.max(docHeight - winHeight, 1);
+  const ratio = scrollY / scrollable;
 
-  let ratio = scrollPos / (docHeight - screenHeight);
-  scrollChicken.style.top = `${ratio * 80 + 10}%`;
+  const minTop = 60; // px from top
+  const maxTop = winHeight - 140; // leave some room at bottom
+  const newTop = minTop + (maxTop - minTop) * ratio;
+
+  scrollChicken.style.top = `${newTop}px`;
 });
 
-/* ------------------------------
-   MODAL IMAGE ENLARGEMENT
---------------------------------*/
+// =========================================
+// IMAGE ZOOM (NOT FULLSCREEN)
+// =========================================
 
+// Opens a small zoom overlay when any .expandable image is clicked
 const modal = document.getElementById("imgModal");
 const modalImg = document.getElementById("modalImg");
-const closeModal = document.getElementById("closeModal");
 
-document.querySelectorAll(".expandable").forEach(img => {
+document.querySelectorAll(".expandable").forEach((img) => {
   img.addEventListener("click", () => {
-    modal.style.display = "block";
     modalImg.src = img.src;
+    modal.classList.add("show");
+    modal.style.display = "flex";
   });
 });
 
-closeModal.addEventListener("click", () => {
+// Close the zoom overlay when user clicks anywhere on the overlay
+modal.addEventListener("click", () => {
+  modal.classList.remove("show");
   modal.style.display = "none";
 });
 
-/* ------------------------------
-   BLOOPERS AUDIO
---------------------------------*/
+// =========================================
+// BLOOPERS AUDIO CONTROLS
+// =========================================
 
-const audio = document.getElementById("bloopersAudio");
-document.getElementById("playBtn").onclick = () => audio.play();
-document.getElementById("pauseBtn").onclick = () => audio.pause();
+// Simple audio play / pause controls that remember position
+const bloopersAudio = document.getElementById("bloopersAudio");
+const playBtn = document.getElementById("playBtn");
+const pauseBtn = document.getElementById("pauseBtn");
+
+if (bloopersAudio && playBtn && pauseBtn) {
+  playBtn.addEventListener("click", () => {
+    bloopersAudio.play();
+  });
+
+  pauseBtn.addEventListener("click", () => {
+    bloopersAudio.pause();
+  });
+}
