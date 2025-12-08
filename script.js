@@ -42,12 +42,19 @@ if (modal) {
 }
 
 // =========================================
-// BLOOPERS AUDIO
+// BLOOPERS AUDIO CONTROLS
 // =========================================
 
-// Uses the native audio controls to show timeline.
-// No extra JS needed besides confirming the element exists.
 const bloopersAudio = document.getElementById("bloopersAudio");
-if (bloopersAudio) {
-  // Placeholder in case you want to add custom behavior later.
+const playBtn = document.getElementById("playBtn");
+const pauseBtn = document.getElementById("pauseBtn");
+
+if (bloopersAudio && playBtn && pauseBtn) {
+  playBtn.addEventListener("click", () => {
+    bloopersAudio.play();
+  });
+
+  pauseBtn.addEventListener("click", () => {
+    bloopersAudio.pause();
+  });
 }
