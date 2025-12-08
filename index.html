@@ -2,238 +2,183 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Communications Lab Portfolio</title>
 
-  <!-- Makes the page responsive on phones and laptops -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Pixel / Minecraft-style font for headings -->
+  <!-- Minecraft-style pixel font -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-  <!-- External stylesheet -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <!-- Minecraft chicken used as a visual scroll indicator on the right -->
-  <img src="Media/Chicken.png" alt="Minecraft chicken" class="chicken-helper" id="chicken-helper" />
+  <!-- Chicken scroll indicator -->
+  <img src="Media/Chicken.png" class="scroll-chicken" id="scrollChicken" alt="Scroll Chicken">
 
-  <!-- Navigation bar with links that scroll to sections -->
-  <header>
+  <!-- Moving chicken above project boxes -->
+  <img src="Media/Chicken2.png" class="top-chicken" id="topChicken" alt="Top Chicken">
+
+  <!-- Navigation bar using Minecraft button background -->
+  <header class="navbar">
     <nav>
-      <a href="#home">Home</a>
-      <a href="#video30mff">30MFF Video</a>
-      <a href="#comic">Comic Project</a>
-      <a href="#sound">Sound Project</a>
-      <a href="#film">Film Project</a>
+      <a href="#home" class="menu-btn">Home</a>
+      <a href="#video30mff" class="menu-btn">30MFF Video</a>
+      <a href="#comic" class="menu-btn">Comic Project</a>
+      <a href="#sound" class="menu-btn">Sound Project</a>
+      <a href="#film" class="menu-btn">Film Project</a>
     </nav>
   </header>
 
   <main>
 
-    <!-- HOME SECTION: Main 3D title, combined card with image + intro, and metadata line -->
+    <!-- HOME SECTION: Large Minecraft title + description box -->
     <section id="home" class="full-section">
-      <div class="container">
+      <h1 class="main-title minecraft-3d">PORTFOLIO</h1>
 
-        <!-- Large Minecraft-style main title at the top of the page -->
-        <h1 class="main-title minecraft-heading">PORTFOLIO</h1>
+      <div class="home-box">
 
-        <!-- Main home card containing the portrait and introduction text -->
-        <div class="home-card card">
-          <div class="home-card-inner">
-
-            <!-- Square portrait inside the card on the left -->
-            <div class="home-card-image">
-              <img src="Media/me.png" alt="Portrait" />
-            </div>
-
-            <!-- Introductory text about the portfolio on the right -->
-            <div class="home-card-copy">
-              <h2 class="section-title minecraft-heading">COMMUNICATIONS LAB PORTFOLIO</h2>
-              <p>
-                My name is Jana Mohsen, this is my portfolio for the Communication Lab class. It gathers my four main projects in one Minecraft-inspired space: a 30MFF video, an interactive comic, a sound project, and a short film.
-              </p>
-              <p>
-                Each section includes a short description, a direct link to the project, and extra behind-the-scenes content. Scroll down, follow the chicken on the right, and explore how each assignment shaped my creative and technical skills.
-              </p>
-            </div>
-
-          </div>
+        <!-- Portrait image inside the box -->
+        <div class="home-photo">
+          <img src="Media/me.png" alt="Jana Mohsen">
         </div>
 
-        <!-- Simple line identifying the assignment details under the home card -->
-        <div class="home-meta">
-          Jana Mohsen · jam9879 · Assignment 5
+        <!-- Text written on top of Box.png -->
+        <div class="home-text text-overlay">
+          <p>
+            My name is <b>Jana Mohsen</b>, and this is my portfolio for the Fall Communications Lab course.
+            It showcases my main projects including a 30MFF video, interactive comic, sound project, and a short film.
+          </p>
+          <p>
+            Scroll down and explore how each assignment shaped my creative work, all displayed inside a Minecraft-themed world.
+          </p>
         </div>
       </div>
+
+      <p class="footer-label">Jana Mohsen — jam9879 — Assignment 5</p>
     </section>
 
-    <!-- 30MFF VIDEO SECTION: Title, description, visual, and external link -->
-    <section id="video30mff" class="full-section project-section">
-      <div class="container">
+    <!-- 30MFF VIDEO SECTION -->
+    <section id="video30mff" class="full-section">
 
-        <!-- Centered Minecraft-style project title above the content -->
-        <h2 class="project-title minecraft-heading">30MFF VIDEO PROJECT</h2>
+      <!-- Minecraft heading -->
+      <h2 class="section-heading minecraft-3d">30MFF VIDEO PROJECT</h2>
 
-        <!-- Moving chicken2 above the project content for decoration -->
-        <img src="Media/Chicken2.png" alt="Minecraft chicken running" class="chicken-runner" />
-
-        <!-- Side-by-side layout for visual and description -->
-        <div class="section-inner">
-          <div class="project-media">
-            <img src="Media/30MFF.png" alt="30MFF video still" />
-          </div>
-
-          <div class="project-text card">
-            <p>
-              “My 30MFF Film” follows a casual walk of a senior student at NYUAD between classes, capturing the raw perspective of daily life and how an ordinary convenience-store stop becomes a moment of reset. The filming intentionally adopts a laid-back, unpolished style to reflect the spontaneity of the experience.
-            </p>
-          </div>
-        </div>
-
-        <!-- Separate box under the section containing the project link -->
-        <div class="project-link-wrapper">
-          <a class="project-link" href="https://jannaaa-12.github.io/Assignment1/#home" target="_blank" rel="noopener">
-            View 30MFF Website
-          </a>
-        </div>
+      <!-- Description box -->
+      <div class="desc-box text-overlay">
+        <p>
+          “My 30MFF Film” captures a casual walk of a senior student at NYUAD between classes, showing how an ordinary convenience-store stop becomes a moment of calm. The film embraces a natural, spontaneous shooting style.
+        </p>
       </div>
+
+      <!-- Project picture -->
+      <div class="project-media">
+        <img src="Media/30MFF.png" alt="30MFF Still">
+      </div>
+
+      <!-- Minecraft-style button -->
+      <a href="https://jannaaa-12.github.io/Assignment1/#home" target="_blank" class="link-btn">
+        View 30MFF Website
+      </a>
     </section>
 
-    <!-- COMIC PROJECT SECTION: Title, description, diamond image layout, and link -->
-    <section id="comic" class="full-section project-section">
-      <div class="container">
+    <!-- COMIC PROJECT SECTION -->
+    <section id="comic" class="full-section">
 
-        <!-- Centered Minecraft-style project title -->
-        <h2 class="project-title minecraft-heading">COMIC PROJECT</h2>
+      <h2 class="section-heading minecraft-3d">COMIC PROJECT</h2>
 
-        <!-- Moving chicken2 above this project -->
-        <img src="Media/Chicken2.png" alt="Minecraft chicken running" class="chicken-runner" />
+      <div class="desc-box text-overlay">
+        <p>
+          "Wally’s Adventure" is an interactive comic where choices shape the story. A simple errand turns mysterious as the reader picks the path Wally follows.
+        </p>
+      </div>
 
-        <!-- Layout with diamond image grid and text card -->
-        <div class="section-inner">
-          <div class="project-media">
-            <!-- Diamond grid for the four comic panels -->
-            <div class="diamond-grid">
-              <img src="Media/2.png"    alt="Comic panel 1" class="diamond-item diamond-item-1" />
-              <img src="Media/5b3.png"  alt="Comic panel 2" class="diamond-item diamond-item-2" />
-              <img src="Media/5a2a.png" alt="Comic panel 3" class="diamond-item diamond-item-3" />
-              <img src="Media/5b3a.png" alt="Comic panel 4" class="diamond-item diamond-item-4" />
-            </div>
-          </div>
+      <!-- Picture.png frame -->
+      <div class="picture-frame">
+        <img src="Media/Picture.png" class="frame-bg">
 
-          <div class="project-text card">
-            <p>
-              The interactive comic “Wally’s Adventure” begins when Wally is sent to buy nuts and discovers a mysterious note that launches him into a choose-your-own-path story. Each yes-or-no decision shapes the journey and reveals a different version of his simple errand.
-            </p>
-          </div>
-        </div>
-
-        <!-- External link to the comic website -->
-        <div class="project-link-wrapper">
-          <a class="project-link" href="https://khatirak.github.io/comic_assignment/comic.html" target="_blank" rel="noopener">
-            View Comic Website
-          </a>
+        <!-- Four images placed inside the Picture.png frame -->
+        <div class="frame-grid">
+          <img src="Media/2.png" class="frame-item expandable">
+          <img src="Media/5b3.png" class="frame-item expandable">
+          <img src="Media/5a2a.png" class="frame-item expandable">
+          <img src="Media/5b3a.png" class="frame-item expandable">
         </div>
       </div>
+
+      <a href="https://khatirak.github.io/comic_assignment/comic.html" target="_blank" class="link-btn">
+        View Comic Website
+      </a>
     </section>
 
-    <!-- SOUND PROJECT SECTION: Title, description, bloopers visual/audio, and link -->
-    <section id="sound" class="full-section project-section">
-      <div class="container">
+    <!-- SOUND PROJECT SECTION -->
+    <section id="sound" class="full-section">
 
-        <!-- Centered Minecraft-style project title -->
-        <h2 class="project-title minecraft-heading">SOUND PROJECT</h2>
+      <h2 class="section-heading minecraft-3d">SOUND PROJECT</h2>
 
-        <!-- Moving chicken2 above this project -->
-        <img src="Media/Chicken2.png" alt="Minecraft chicken running" class="chicken-runner" />
-
-        <!-- Description card and bloopers visual/audio layout -->
-        <div class="section-inner">
-          <div class="project-media">
-            <div class="bloopers-panel">
-
-              <!-- Full image for the bloopers card -->
-              <img src="Media/Background1.png" alt="Girl Talk recording" class="bloopers-image" />
-
-              <!-- Custom audio controls underneath the image -->
-              <div class="bloopers-controls">
-                <h3 class="bloopers-title">Bloopers</h3>
-
-                <!-- Simple audio progress bar -->
-                <div class="audio-bar">
-                  <div class="audio-bar-fill" id="audio-progress"></div>
-                </div>
-
-                <!-- Play and pause buttons for the audio -->
-                <div class="bloopers-buttons">
-                  <button class="btn-round" id="play-btn">Play</button>
-                  <button class="btn-round" id="pause-btn">Pause</button>
-                </div>
-
-                <!-- Hidden audio element used by the custom controls -->
-                <audio id="bloopers-audio" src="Media/Bloopers.mp3"></audio>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-text card">
-            <p>
-              “Girl Talk: Real Conversations, Real Women” is a podcast-style sound project meant to feel like a supportive, honest conversation with friends. Episodes such as “Girl Math” and “Pink Tax” mix personal stories with light social commentary and highlight how everyday experiences connect to bigger themes.
-            </p>
-          </div>
-        </div>
-
-        <!-- Link to the main sound project site -->
-        <div class="project-link-wrapper">
-          <a class="project-link" href="https://sma9389.github.io/Sound-Project/" target="_blank" rel="noopener">
-            View Sound Project
-          </a>
-        </div>
+      <div class="desc-box text-overlay">
+        <p>
+          “Girl Talk: Real Conversations, Real Women” is a podcast-style sound project full of real, unfiltered discussions about life, identity, and everyday challenges.
+        </p>
       </div>
+
+      <!-- Bloopers panel -->
+      <div class="bloopers-wrapper">
+        <img src="Media/Background1.png" class="bloopers-image">
+
+        <h3 class="bloopers-title">Bloopers</h3>
+
+        <div class="audio-controls">
+          <button id="playBtn" class="btn-round">Play</button>
+          <button id="pauseBtn" class="btn-round">Pause</button>
+        </div>
+
+        <audio id="bloopersAudio" src="Media/Bloopers.mp3"></audio>
+      </div>
+
+      <a href="https://sma9389.github.io/Sound-Project/" target="_blank" class="link-btn">
+        View Sound Project
+      </a>
     </section>
 
-    <!-- FILM PROJECT SECTION: Title, description, diamond BTS layout, and link -->
-    <section id="film" class="full-section project-section">
-      <div class="container">
+    <!-- FILM PROJECT SECTION -->
+    <section id="film" class="full-section">
 
-        <!-- Centered Minecraft-style project title -->
-        <h2 class="project-title minecraft-heading">FILM PROJECT</h2>
+      <h2 class="section-heading minecraft-3d">FILM PROJECT</h2>
 
-        <!-- Moving chicken2 above this project -->
-        <img src="Media/Chicken2.png" alt="Minecraft chicken running" class="chicken-runner" />
+      <div class="desc-box text-overlay">
+        <p>
+          “Matcha Story” documents the calming ritual of preparing the perfect matcha latte, from ingredients to final pour.
+        </p>
+      </div>
 
-        <!-- Layout including diamond BTS images and description -->
-        <div class="section-inner">
-          <div class="project-media">
-            <!-- Diamond grid for the four BTS photos -->
-            <div class="diamond-grid">
-              <img src="Media/BTS1.png" alt="Behind the scenes 1" class="diamond-item diamond-item-1" />
-              <img src="Media/BTS2.png" alt="Behind the scenes 2" class="diamond-item diamond-item-2" />
-              <img src="Media/BTS3.png" alt="Behind the scenes 3" class="diamond-item diamond-item-3" />
-              <img src="Media/BTS4.png" alt="Behind the scenes 4" class="diamond-item diamond-item-4" />
-            </div>
-          </div>
+      <!-- Picture.png frame -->
+      <div class="picture-frame">
+        <img src="Media/Picture.png" class="frame-bg">
 
-          <div class="project-text card">
-            <p>
-              “Matcha Story: The Story of a Perfect Matcha Latte” documents the process of preparing the ideal matcha, from picking ingredients to the final pour. The video focuses on the sensory and ritual elements that turn this drink into a calm, intentional moment in the middle of a busy day.
-            </p>
-          </div>
-        </div>
-
-        <!-- External link to the matcha film website -->
-        <div class="project-link-wrapper">
-          <a class="project-link" href="https://khatirak.github.io/film_assignment/" target="_blank" rel="noopener">
-            View Film Website
-          </a>
+        <div class="frame-grid">
+          <img src="Media/BTS1.png" class="frame-item expandable">
+          <img src="Media/BTS2.png" class="frame-item expandable">
+          <img src="Media/BTS3.png" class="frame-item expandable">
+          <img src="Media/BTS4.png" class="frame-item expandable">
         </div>
       </div>
+
+      <a href="https://khatirak.github.io/film_assignment/" target="_blank" class="link-btn">
+        View Film Website
+      </a>
     </section>
 
   </main>
 
-  <!-- External JavaScript file for audio controls and chicken scroll behavior -->
+  <!-- Modal for fullscreen image preview -->
+  <div id="imgModal" class="modal">
+    <span id="closeModal">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
