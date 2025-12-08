@@ -2,19 +2,16 @@
    GLOBAL RESET AND BACKGROUND
    ========================================= */
 
-/* Reset default margins and paddings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Smooth scrolling to anchor sections */
 html {
   scroll-behavior: smooth;
 }
 
-/* Main page background using Minecraft world image */
 body {
   font-family: Arial, sans-serif;
   background: url("Media/Background.jpeg") center/cover fixed no-repeat;
@@ -25,7 +22,6 @@ body {
    NAVIGATION BAR
    ========================================= */
 
-/* Container for the nav bar */
 .navbar {
   position: fixed;
   top: 0;
@@ -33,7 +29,7 @@ body {
   z-index: 1000;
 }
 
-/* One long Minecraft-style strip behind all menu items */
+/* One long Minecraft-style strip behind all menu items, now 3D */
 .nav-inner {
   max-width: 900px;
   margin: 0 auto;
@@ -42,9 +38,11 @@ body {
   display: flex;
   justify-content: center;
   gap: 2.5rem;
+
+  border: 4px solid #f5f5f5;
+  box-shadow: 0 5px 0 #3c3c3c, 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Individual menu links on top of the strip */
 .nav-link {
   font-family: "Press Start 2P", sans-serif;
   font-size: 12px;
@@ -60,7 +58,6 @@ body {
    SECTIONS AND TITLES
    ========================================= */
 
-/* Each full section fills the screen vertically */
 .full-section {
   min-height: 100vh;
   padding: 120px 0 80px;
@@ -69,12 +66,10 @@ body {
   align-items: center;
 }
 
-/* Home section needs some extra spacing above the box */
 .home-section .main-title {
   margin-bottom: 40px;
 }
 
-/* Minecraft-style 3D effect for main headings */
 .minecraft-3d {
   font-family: "Press Start 2P", sans-serif;
   font-size: 40px;
@@ -82,7 +77,6 @@ body {
   text-shadow: 4px 4px 0px #3b3b3b, 8px 8px 0px #000000;
 }
 
-/* Section headings for each project */
 .section-heading {
   margin-bottom: 30px;
 }
@@ -99,10 +93,9 @@ body {
 }
 
 /* =========================================
-   HOME SECTION LAYOUT
+   HOME SECTION
    ========================================= */
 
-/* Main home card holding text and portrait */
 .home-box {
   max-width: 1000px;
   width: 90%;
@@ -112,13 +105,11 @@ body {
   align-items: center;
   gap: 30px;
 
-  /* 3D box effect */
   border: 4px solid #f5f5f5;
   border-radius: 10px;
   box-shadow: 0 6px 0 #3c3c3c, 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Portrait on the home page */
 .home-photo img {
   width: 260px;
   height: 260px;
@@ -126,31 +117,29 @@ body {
   object-fit: cover;
 }
 
-/* Text area inside boxes that sit on Box.png */
 .text-overlay {
   color: #ffffff;
   font-size: 18px;
   line-height: 1.6;
 }
 
-/* Label under the home card */
 .footer-label {
   margin-top: 26px;
-  font-size: 14px;
+  font-size: 18px;
+  color: #000000;
 }
 
 /* =========================================
    PROJECT MEDIA AND DESCRIPTION BOXES
    ========================================= */
 
-/* Column containing images or special frames */
 .project-media {
   flex: 1 1 50%;
   display: flex;
   justify-content: center;
 }
 
-/* Standard project image styling (30MFF, etc.) */
+/* 3D-style large image (e.g., 30MFF still) */
 .project-image {
   max-width: 100%;
   width: 420px;
@@ -159,7 +148,7 @@ body {
   box-shadow: 0 6px 0 #3c3c3c, 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Description boxes using Box.png, also 3D */
+/* Description boxes using Box.png, 3D */
 .desc-box {
   flex: 1 1 50%;
   padding: 28px 30px;
@@ -170,7 +159,6 @@ body {
   box-shadow: 0 6px 0 #3c3c3c, 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Sound project description slightly larger for comfort */
 .sound-desc-box {
   padding: 36px 34px;
 }
@@ -179,20 +167,18 @@ body {
    PICTURE FRAME FOR COMIC AND FILM
    ========================================= */
 
-/* Wrapper that holds Picture.png and four images inside it */
 .picture-frame {
   position: relative;
   max-width: 520px;
   width: 100%;
 }
 
-/* Background frame image */
 .frame-bg {
   width: 100%;
   display: block;
 }
 
-/* Grid area aligned a bit inside the inner squares of Picture.png */
+/* Inner grid slightly smaller than white squares */
 .frame-grid {
   position: absolute;
   top: 10%;
@@ -205,7 +191,6 @@ body {
   gap: 10px;
 }
 
-/* Each image slightly smaller than the white boxes */
 .frame-item {
   width: 90%;
   height: 90%;
@@ -216,16 +201,24 @@ body {
 }
 
 /* =========================================
-   SOUND PROJECT BLOOPERS PANEL
+   SOUND PROJECT LAYOUT
    ========================================= */
 
-/* Wrapper for the image and audio controls */
+/* Whole row on a big Box.png, 3D */
+.sound-row {
+  background: url("Media/Box.png") center/cover no-repeat;
+  border-radius: 10px;
+  border: 4px solid #f5f5f5;
+  box-shadow: 0 6px 0 #3c3c3c, 0 10px 20px rgba(0, 0, 0, 0.6);
+  padding: 40px;
+}
+
+/* Left column image and audio */
 .bloopers-wrapper {
   width: 420px;
   max-width: 100%;
 }
 
-/* Main bloopers still image */
 .bloopers-image {
   width: 100%;
   display: block;
@@ -233,7 +226,6 @@ body {
   box-shadow: 0 6px 0 #3c3c3c, 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Text label and audio under the image */
 .bloopers-controls {
   text-align: center;
   margin-top: 14px;
@@ -245,7 +237,29 @@ body {
   margin-bottom: 10px;
 }
 
-/* Audio bar style */
+.audio-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+.btn-round {
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 12px;
+  border: 2px solid #ffffff;
+  background-color: #00000080;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-round:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 .bloopers-audio {
   width: 80%;
 }
@@ -254,7 +268,7 @@ body {
    PROJECT LINK BUTTONS
    ========================================= */
 
-/* Minecraft-style button strip for links */
+/* Only the button image itself gets 3D via shadow (no big white border) */
 .link-btn {
   margin-top: 32px;
   padding: 14px 32px;
@@ -263,7 +277,8 @@ body {
   font-size: 14px;
   color: #ffffff;
   text-decoration: none;
-  border: 3px solid #f5f5f5;
+  display: inline-block;
+
   box-shadow: 0 5px 0 #3c3c3c, 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
@@ -275,7 +290,6 @@ body {
    SCROLLING CHICKEN
    ========================================= */
 
-/* Chicken that moves up and down with scroll on the right */
 .scroll-chicken {
   position: fixed;
   right: 18px;
@@ -288,7 +302,6 @@ body {
    IMAGE ZOOM MODAL
    ========================================= */
 
-/* Overlay for zoom effect */
 .modal {
   display: none;
   position: fixed;
@@ -299,7 +312,6 @@ body {
   align-items: center;
 }
 
-/* Zoomed image (not full screen) */
 .modal-content {
   max-width: 60%;
   max-height: 70%;
@@ -309,7 +321,6 @@ body {
   transition: transform 0.15s ease-out;
 }
 
-/* When modal is visible */
 .modal.show {
   display: flex;
 }
@@ -343,6 +354,10 @@ body {
 
   .scroll-chicken {
     width: 110px;
+  }
+
+  .sound-row {
+    padding: 26px 18px;
   }
 }
 
