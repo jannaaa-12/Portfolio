@@ -31,12 +31,8 @@
     <section id="home" class="full-section home-section">
       <h1 class="main-title minecraft-3d">PORTFOLIO</h1>
 
-      <!-- Intro card with portrait on the left and text on the right -->
+      <!-- Intro card with text on the left and portrait on the right -->
       <div class="home-box">
-        <div class="home-photo">
-          <img src="Media/me.png" alt="Jana Mohsen" />
-        </div>
-
         <div class="home-text text-overlay">
           <p>
             My name is <strong>Jana Mohsen</strong>, and this is my portfolio for the Fall
@@ -47,6 +43,10 @@
             Scroll down to explore how each assignment shaped my creative work, all displayed inside
             a Minecraft-themed world.
           </p>
+        </div>
+
+        <div class="home-photo">
+          <img src="Media/me.png" alt="Jana Mohsen" />
         </div>
       </div>
 
@@ -60,9 +60,9 @@
 
       <!-- Two-column layout for media and description -->
       <div class="section-content">
-        <!-- Visual media on the left -->
+        <!-- Visual media on the left; clickable to zoom -->
         <div class="project-media">
-          <img src="Media/30MFF.png" alt="30MFF Still" />
+          <img src="Media/30MFF.png" alt="30MFF Still" class="project-image expandable" />
         </div>
 
         <!-- Project description on Box.png background on the right -->
@@ -86,7 +86,7 @@
       <h2 class="section-heading minecraft-3d">COMIC PROJECT</h2>
 
       <div class="section-content">
-        <!-- Picture.png frame containing four comic images -->
+        <!-- Picture frame containing four comic images -->
         <div class="project-media">
           <div class="picture-frame">
             <img src="Media/Picture.png" class="frame-bg" alt="Comic frame" />
@@ -126,17 +126,20 @@
 
             <div class="bloopers-controls">
               <p class="bloopers-label">Bloopers</p>
-              <div class="audio-controls">
-                <button id="playBtn" class="btn-round">Play</button>
-                <button id="pauseBtn" class="btn-round">Pause</button>
-              </div>
-              <audio id="bloopersAudio" src="Media/Bloopers.mp3"></audio>
+
+              <!-- Native audio bar visible -->
+              <audio
+                id="bloopersAudio"
+                src="Media/Bloopers.mp3"
+                controls
+                class="bloopers-audio"
+              ></audio>
             </div>
           </div>
         </div>
 
-        <!-- Sound project description on Box.png -->
-        <div class="desc-box text-overlay">
+        <!-- Sound project description on a larger Box.png -->
+        <div class="desc-box text-overlay sound-desc-box">
           <p>
             “Girl Talk: Real Conversations, Real Women” is a podcast-style project where friends
             talk honestly about life, identity, and everyday topics. It aims to feel like a familiar,
@@ -150,12 +153,21 @@
       </a>
     </section>
 
-    <!-- FILM PROJECT SECTION: Picture frame left, description right -->
+    <!-- FILM PROJECT SECTION: text left, picture frame right -->
     <section id="film" class="full-section project-section">
       <h2 class="section-heading minecraft-3d">FILM PROJECT</h2>
 
       <div class="section-content">
-        <!-- Picture.png frame containing four BTS film images -->
+        <!-- Film project description on the left now -->
+        <div class="desc-box text-overlay">
+          <p>
+            “Matcha Story” documents the calming ritual of preparing a perfect matcha latte, from
+            ingredients to final pour. The film focuses on quiet details and the soothing pace of
+            the process.
+          </p>
+        </div>
+
+        <!-- Picture frame containing four BTS film images on the right -->
         <div class="project-media">
           <div class="picture-frame">
             <img src="Media/Picture.png" class="frame-bg" alt="Film frame" />
@@ -167,15 +179,6 @@
               <img src="Media/BTS4.png" class="frame-item expandable" alt="BTS 4" />
             </div>
           </div>
-        </div>
-
-        <!-- Film project description on Box.png -->
-        <div class="desc-box text-overlay">
-          <p>
-            “Matcha Story” documents the calming ritual of preparing a perfect matcha latte, from
-            ingredients to final pour. The film focuses on quiet details and the soothing pace of
-            the process.
-          </p>
         </div>
       </div>
 
