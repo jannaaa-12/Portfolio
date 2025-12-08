@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
   const scrollable = Math.max(docHeight - winHeight, 1);
   const ratio = scrollY / scrollable;
 
-  const minTop = 60; // px from top
+  const minTop = 60; // pixels from top
   const maxTop = winHeight - 140; // leave some room at bottom
   const newTop = minTop + (maxTop - minTop) * ratio;
 
@@ -31,31 +31,23 @@ document.querySelectorAll(".expandable").forEach((img) => {
   img.addEventListener("click", () => {
     modalImg.src = img.src;
     modal.classList.add("show");
-    modal.style.display = "flex";
   });
 });
 
 // Close the zoom overlay when user clicks anywhere on the overlay
-modal.addEventListener("click", () => {
-  modal.classList.remove("show");
-  modal.style.display = "none";
-});
+if (modal) {
+  modal.addEventListener("click", () => {
+    modal.classList.remove("show");
+  });
+}
 
 // =========================================
-// BLOOPERS AUDIO CONTROLS
+// BLOOPERS AUDIO
 // =========================================
 
-// Simple audio play / pause controls that remember position
+// Uses the native audio controls to show timeline.
+// No extra JS needed besides confirming the element exists.
 const bloopersAudio = document.getElementById("bloopersAudio");
-const playBtn = document.getElementById("playBtn");
-const pauseBtn = document.getElementById("pauseBtn");
-
-if (bloopersAudio && playBtn && pauseBtn) {
-  playBtn.addEventListener("click", () => {
-    bloopersAudio.play();
-  });
-
-  pauseBtn.addEventListener("click", () => {
-    bloopersAudio.pause();
-  });
+if (bloopersAudio) {
+  // Placeholder in case you want to add custom behavior later.
 }
