@@ -102,7 +102,7 @@ body {
    HOME SECTION LAYOUT
    ========================================= */
 
-/* Main home card holding portrait and text */
+/* Main home card holding text and portrait */
 .home-box {
   max-width: 1000px;
   width: 90%;
@@ -111,13 +111,18 @@ body {
   display: flex;
   align-items: center;
   gap: 30px;
+
+  /* 3D box effect */
+  border: 4px solid #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 6px 0 #3c3c3c, 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
 /* Portrait on the home page */
 .home-photo img {
   width: 260px;
   height: 260px;
-  border-radius: 12px;
+  border-radius: 14px;
   object-fit: cover;
 }
 
@@ -145,19 +150,29 @@ body {
   justify-content: center;
 }
 
-/* Standard project image styling */
-.project-media > img {
+/* Standard project image styling (30MFF, etc.) */
+.project-image {
   max-width: 100%;
   width: 420px;
   border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #3c3c3c, 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Description boxes using Box.png */
+/* Description boxes using Box.png, also 3D */
 .desc-box {
   flex: 1 1 50%;
   padding: 28px 30px;
   background: url("Media/Box.png") center/cover no-repeat;
   border-radius: 10px;
+
+  border: 4px solid #f5f5f5;
+  box-shadow: 0 6px 0 #3c3c3c, 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Sound project description slightly larger for comfort */
+.sound-desc-box {
+  padding: 36px 34px;
 }
 
 /* =========================================
@@ -177,23 +192,24 @@ body {
   display: block;
 }
 
-/* Grid area aligned to the inner squares of Picture.png */
+/* Grid area aligned a bit inside the inner squares of Picture.png */
 .frame-grid {
   position: absolute;
-  top: 8%;
-  left: 7%;
-  width: 86%;
-  height: 86%;
+  top: 10%;
+  left: 8%;
+  width: 84%;
+  height: 84%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
 }
 
-/* Each image inside the Picture.png squares */
+/* Each image slightly smaller than the white boxes */
 .frame-item {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
+  margin: auto;
   object-fit: cover;
   border-radius: 6px;
   cursor: pointer;
@@ -214,9 +230,10 @@ body {
   width: 100%;
   display: block;
   border-radius: 10px;
+  box-shadow: 0 6px 0 #3c3c3c, 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Text label and buttons under the image */
+/* Text label and audio under the image */
 .bloopers-controls {
   text-align: center;
   margin-top: 14px;
@@ -228,27 +245,9 @@ body {
   margin-bottom: 10px;
 }
 
-/* Play / Pause buttons */
-.audio-controls {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-}
-
-.btn-round {
-  padding: 8px 20px;
-  border-radius: 6px;
-  font-family: "Press Start 2P", sans-serif;
-  font-size: 12px;
-  border: 2px solid #ffffff;
-  background-color: #00000080;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-.btn-round:hover {
-  background-color: #ffffff;
-  color: #000000;
+/* Audio bar style */
+.bloopers-audio {
+  width: 80%;
 }
 
 /* =========================================
@@ -264,6 +263,8 @@ body {
   font-size: 14px;
   color: #ffffff;
   text-decoration: none;
+  border: 3px solid #f5f5f5;
+  box-shadow: 0 5px 0 #3c3c3c, 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
 .link-btn:hover {
@@ -294,7 +295,6 @@ body {
   inset: 0;
   background: rgba(0, 0, 0, 0.65);
   z-index: 2000;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -309,7 +309,11 @@ body {
   transition: transform 0.15s ease-out;
 }
 
-/* Show as slightly bigger when modal is visible */
+/* When modal is visible */
+.modal.show {
+  display: flex;
+}
+
 .modal.show .modal-content {
   transform: scale(1);
 }
