@@ -6,104 +6,106 @@
   <title>Communications Lab Portfolio</title>
 
   <!-- Minecraft-style pixel font -->
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-  <!-- Stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <!-- Chicken that follows scroll on the right side -->
+  <img src="Media/Chicken.png" class="scroll-chicken" id="scrollChicken" alt="Scroll Chicken" />
 
-  <!-- Chicken scroll indicator -->
-  <img src="Media/Chicken.png" class="scroll-chicken" id="scrollChicken" alt="Scroll Chicken">
-
-  <!-- Moving chicken above project boxes -->
-  <img src="Media/Chicken2.png" class="top-chicken" id="topChicken" alt="Top Chicken">
-
-  <!-- Navigation bar using Minecraft button background -->
+  <!-- Navigation bar sitting on one long Minecraft-style strip -->
   <header class="navbar">
-    <nav>
-      <a href="#home" class="menu-btn">Home</a>
-      <a href="#video30mff" class="menu-btn">30MFF Video</a>
-      <a href="#comic" class="menu-btn">Comic Project</a>
-      <a href="#sound" class="menu-btn">Sound Project</a>
-      <a href="#film" class="menu-btn">Film Project</a>
+    <nav class="nav-inner">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#video30mff" class="nav-link">30MFF Video</a>
+      <a href="#comic" class="nav-link">Comic Project</a>
+      <a href="#sound" class="nav-link">Sound Project</a>
+      <a href="#film" class="nav-link">Film Project</a>
     </nav>
   </header>
 
   <main>
-
-    <!-- HOME SECTION: Large Minecraft title + description box -->
-    <section id="home" class="full-section">
+    <!-- HOME SECTION: Title and overall description of the portfolio -->
+    <section id="home" class="full-section home-section">
       <h1 class="main-title minecraft-3d">PORTFOLIO</h1>
 
+      <!-- Intro card with portrait on the left and text on the right -->
       <div class="home-box">
-
-        <!-- Portrait image inside the box -->
         <div class="home-photo">
-          <img src="Media/me.png" alt="Jana Mohsen">
+          <img src="Media/me.png" alt="Jana Mohsen" />
         </div>
 
-        <!-- Text written on top of Box.png -->
         <div class="home-text text-overlay">
           <p>
-            My name is <b>Jana Mohsen</b>, and this is my portfolio for the Fall Communications Lab course.
-            It showcases my main projects including a 30MFF video, interactive comic, sound project, and a short film.
+            My name is <strong>Jana Mohsen</strong>, and this is my portfolio for the Fall
+            Communications Lab course. It showcases my main projects: a 30MFF video, an interactive
+            comic, a sound project, and a short film.
           </p>
           <p>
-            Scroll down and explore how each assignment shaped my creative work, all displayed inside a Minecraft-themed world.
+            Scroll down to explore how each assignment shaped my creative work, all displayed inside
+            a Minecraft-themed world.
           </p>
         </div>
       </div>
 
-      <p class="footer-label">Jana Mohsen — jam9879 — Assignment 5</p>
+      <!-- Short label under the home box with name and email -->
+      <p class="footer-label">Jana Mohsen — Jam9879@nyu.edu</p>
     </section>
 
-    <!-- 30MFF VIDEO SECTION -->
-    <section id="video30mff" class="full-section">
-
-      <!-- Minecraft heading -->
+    <!-- 30MFF VIDEO SECTION: description right, image left -->
+    <section id="video30mff" class="full-section project-section">
       <h2 class="section-heading minecraft-3d">30MFF VIDEO PROJECT</h2>
 
-      <!-- Description box -->
-      <div class="desc-box text-overlay">
-        <p>
-          “My 30MFF Film” captures a casual walk of a senior student at NYUAD between classes, showing how an ordinary convenience-store stop becomes a moment of calm. The film embraces a natural, spontaneous shooting style.
-        </p>
+      <!-- Two-column layout for media and description -->
+      <div class="section-content">
+        <!-- Visual media on the left -->
+        <div class="project-media">
+          <img src="Media/30MFF.png" alt="30MFF Still" />
+        </div>
+
+        <!-- Project description on Box.png background on the right -->
+        <div class="desc-box text-overlay">
+          <p>
+            “My 30MFF Film” follows a senior student at NYUAD between classes, showing how an
+            ordinary convenience-store stop becomes a calm reset moment. The film embraces a
+            laid-back, spontaneous shooting style.
+          </p>
+        </div>
       </div>
 
-      <!-- Project picture -->
-      <div class="project-media">
-        <img src="Media/30MFF.png" alt="30MFF Still">
-      </div>
-
-      <!-- Minecraft-style button -->
+      <!-- Project link under the section -->
       <a href="https://jannaaa-12.github.io/Assignment1/#home" target="_blank" class="link-btn">
         View 30MFF Website
       </a>
     </section>
 
-    <!-- COMIC PROJECT SECTION -->
-    <section id="comic" class="full-section">
-
+    <!-- COMIC PROJECT SECTION: Picture frame left, description right -->
+    <section id="comic" class="full-section project-section">
       <h2 class="section-heading minecraft-3d">COMIC PROJECT</h2>
 
-      <div class="desc-box text-overlay">
-        <p>
-          "Wally’s Adventure" is an interactive comic where choices shape the story. A simple errand turns mysterious as the reader picks the path Wally follows.
-        </p>
-      </div>
+      <div class="section-content">
+        <!-- Picture.png frame containing four comic images -->
+        <div class="project-media">
+          <div class="picture-frame">
+            <img src="Media/Picture.png" class="frame-bg" alt="Comic frame" />
 
-      <!-- Picture.png frame -->
-      <div class="picture-frame">
-        <img src="Media/Picture.png" class="frame-bg">
+            <div class="frame-grid">
+              <img src="Media/2.png" class="frame-item expandable" alt="Comic panel 1" />
+              <img src="Media/5b3.png" class="frame-item expandable" alt="Comic panel 2" />
+              <img src="Media/5a2a.png" class="frame-item expandable" alt="Comic panel 3" />
+              <img src="Media/5b3a.png" class="frame-item expandable" alt="Comic panel 4" />
+            </div>
+          </div>
+        </div>
 
-        <!-- Four images placed inside the Picture.png frame -->
-        <div class="frame-grid">
-          <img src="Media/2.png" class="frame-item expandable">
-          <img src="Media/5b3.png" class="frame-item expandable">
-          <img src="Media/5a2a.png" class="frame-item expandable">
-          <img src="Media/5b3a.png" class="frame-item expandable">
+        <!-- Comic description on Box.png -->
+        <div class="desc-box text-overlay">
+          <p>
+            “Wally’s Adventure” is an interactive comic where a simple trip to buy nuts turns into
+            a mysterious journey. Each choice the reader makes leads Wally down a different path.
+          </p>
         </div>
       </div>
 
@@ -112,29 +114,35 @@
       </a>
     </section>
 
-    <!-- SOUND PROJECT SECTION -->
-    <section id="sound" class="full-section">
-
+    <!-- SOUND PROJECT SECTION: sound image left, description right -->
+    <section id="sound" class="full-section project-section">
       <h2 class="section-heading minecraft-3d">SOUND PROJECT</h2>
 
-      <div class="desc-box text-overlay">
-        <p>
-          “Girl Talk: Real Conversations, Real Women” is a podcast-style sound project full of real, unfiltered discussions about life, identity, and everyday challenges.
-        </p>
-      </div>
+      <div class="section-content">
+        <!-- Bloopers art and audio player on the left -->
+        <div class="project-media">
+          <div class="bloopers-wrapper">
+            <img src="Media/Background1.png" class="bloopers-image" alt="Girl Talk" />
 
-      <!-- Bloopers panel -->
-      <div class="bloopers-wrapper">
-        <img src="Media/Background1.png" class="bloopers-image">
-
-        <h3 class="bloopers-title">Bloopers</h3>
-
-        <div class="audio-controls">
-          <button id="playBtn" class="btn-round">Play</button>
-          <button id="pauseBtn" class="btn-round">Pause</button>
+            <div class="bloopers-controls">
+              <p class="bloopers-label">Bloopers</p>
+              <div class="audio-controls">
+                <button id="playBtn" class="btn-round">Play</button>
+                <button id="pauseBtn" class="btn-round">Pause</button>
+              </div>
+              <audio id="bloopersAudio" src="Media/Bloopers.mp3"></audio>
+            </div>
+          </div>
         </div>
 
-        <audio id="bloopersAudio" src="Media/Bloopers.mp3"></audio>
+        <!-- Sound project description on Box.png -->
+        <div class="desc-box text-overlay">
+          <p>
+            “Girl Talk: Real Conversations, Real Women” is a podcast-style project where friends
+            talk honestly about life, identity, and everyday topics. It aims to feel like a familiar,
+            supportive conversation.
+          </p>
+        </div>
       </div>
 
       <a href="https://sma9389.github.io/Sound-Project/" target="_blank" class="link-btn">
@@ -142,26 +150,32 @@
       </a>
     </section>
 
-    <!-- FILM PROJECT SECTION -->
-    <section id="film" class="full-section">
-
+    <!-- FILM PROJECT SECTION: Picture frame left, description right -->
+    <section id="film" class="full-section project-section">
       <h2 class="section-heading minecraft-3d">FILM PROJECT</h2>
 
-      <div class="desc-box text-overlay">
-        <p>
-          “Matcha Story” documents the calming ritual of preparing the perfect matcha latte, from ingredients to final pour.
-        </p>
-      </div>
+      <div class="section-content">
+        <!-- Picture.png frame containing four BTS film images -->
+        <div class="project-media">
+          <div class="picture-frame">
+            <img src="Media/Picture.png" class="frame-bg" alt="Film frame" />
 
-      <!-- Picture.png frame -->
-      <div class="picture-frame">
-        <img src="Media/Picture.png" class="frame-bg">
+            <div class="frame-grid">
+              <img src="Media/BTS1.png" class="frame-item expandable" alt="BTS 1" />
+              <img src="Media/BTS2.png" class="frame-item expandable" alt="BTS 2" />
+              <img src="Media/BTS3.png" class="frame-item expandable" alt="BTS 3" />
+              <img src="Media/BTS4.png" class="frame-item expandable" alt="BTS 4" />
+            </div>
+          </div>
+        </div>
 
-        <div class="frame-grid">
-          <img src="Media/BTS1.png" class="frame-item expandable">
-          <img src="Media/BTS2.png" class="frame-item expandable">
-          <img src="Media/BTS3.png" class="frame-item expandable">
-          <img src="Media/BTS4.png" class="frame-item expandable">
+        <!-- Film project description on Box.png -->
+        <div class="desc-box text-overlay">
+          <p>
+            “Matcha Story” documents the calming ritual of preparing a perfect matcha latte, from
+            ingredients to final pour. The film focuses on quiet details and the soothing pace of
+            the process.
+          </p>
         </div>
       </div>
 
@@ -169,16 +183,14 @@
         View Film Website
       </a>
     </section>
-
   </main>
 
-  <!-- Modal for fullscreen image preview -->
+  <!-- Small zoom overlay for images -->
   <div id="imgModal" class="modal">
-    <span id="closeModal">&times;</span>
-    <img class="modal-content" id="modalImg">
+    <img id="modalImg" class="modal-content" alt="Zoomed image" />
   </div>
 
-  <!-- Script -->
+  <!-- JavaScript for scroll chicken, audio, and zoom behavior -->
   <script src="script.js"></script>
 </body>
 </html>
