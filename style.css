@@ -1,259 +1,366 @@
-/* ------------------------------
-   GLOBAL STYLES & BACKGROUND
---------------------------------*/
+/* =========================================
+   GLOBAL RESET AND BACKGROUND
+   ========================================= */
 
+/* Reset default margins and paddings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Smooth scrolling to anchor sections */
 html {
   scroll-behavior: smooth;
 }
 
+/* Main page background using Minecraft world image */
 body {
   font-family: Arial, sans-serif;
   background: url("Media/Background.jpeg") center/cover fixed no-repeat;
-  overflow-x: hidden;
+  color: #ffffff;
 }
 
-/* Minecraft 3D title effect */
-.minecraft-3d {
-  font-family: "Press Start 2P", sans-serif;
-  font-size: 38px;
-  color: white;
-  text-shadow: 4px 4px 0px #3c3c3c, 8px 8px 0px #000;
-}
-
-/* ------------------------------
+/* =========================================
    NAVIGATION BAR
---------------------------------*/
+   ========================================= */
 
+/* Container for the nav bar */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 12px 0;
   z-index: 1000;
-  text-align: center;
-  background: transparent;
 }
 
-.menu-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  margin: 0 10px;
-  background: url("Media/Buttons.png") center/cover;
-  color: white;
-  font-family: "Press Start 2P";
+/* One long Minecraft-style strip behind all menu items */
+.nav-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  background: url("Media/Buttons.png") center/cover no-repeat;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+/* Individual menu links on top of the strip */
+.nav-link {
+  font-family: "Press Start 2P", sans-serif;
   font-size: 12px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-.menu-btn:hover {
-  filter: brightness(1.2);
+.nav-link:hover {
+  text-decoration: underline;
 }
 
-/* ------------------------------
-   SECTION LAYOUT
---------------------------------*/
+/* =========================================
+   SECTIONS AND TITLES
+   ========================================= */
 
+/* Each full section fills the screen vertically */
 .full-section {
   min-height: 100vh;
-  padding-top: 120px;
-  padding-bottom: 80px;
-  text-align: center;
+  padding: 120px 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* ------------------------------
-   HOME SECTION
---------------------------------*/
+/* Home section needs some extra spacing above the box */
+.home-section .main-title {
+  margin-bottom: 40px;
+}
 
+/* Minecraft-style 3D effect for main headings */
+.minecraft-3d {
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 40px;
+  color: #ffffff;
+  text-shadow: 4px 4px 0px #3b3b3b, 8px 8px 0px #000000;
+}
+
+/* Section headings for each project */
+.section-heading {
+  margin-bottom: 30px;
+}
+
+/* Two-column layout for each project page */
+.section-content {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+/* =========================================
+   HOME SECTION LAYOUT
+   ========================================= */
+
+/* Main home card holding portrait and text */
 .home-box {
+  max-width: 1000px;
   width: 90%;
-  max-width: 900px;
-  margin: auto;
-  background: url("Media/Box.png") center/cover;
-  padding: 40px;
+  padding: 36px 40px;
+  background: url("Media/Box.png") center/cover no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 30px;
 }
 
+/* Portrait on the home page */
 .home-photo img {
   width: 260px;
   height: 260px;
-  border-radius: 8px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
+/* Text area inside boxes that sit on Box.png */
 .text-overlay {
-  color: white;
-  font-size: 20px;
-  line-height: 1.5;
-  margin-left: 30px;
-}
-
-.footer-label {
-  margin-top: 20px;
-  font-size: 14px;
-  color: white;
-}
-
-/* ------------------------------
-   DESCRIPTION BOXES
---------------------------------*/
-
-.desc-box {
-  width: 75%;
-  margin: 20px auto;
-  padding: 30px;
-  background: url("Media/Box.png") center/cover;
-  color: white;
-  font-size: 20px;
+  color: #ffffff;
+  font-size: 18px;
   line-height: 1.6;
 }
 
-/* ------------------------------
-   PROJECT MEDIA
---------------------------------*/
-
-.project-media img {
-  width: 480px;
-  max-width: 90%;
-  border-radius: 8px;
-}
-
-/* ------------------------------
-   MINECRAFT-STYLED LINK BUTTONS
---------------------------------*/
-
-.link-btn {
-  display: inline-block;
-  background: url("Media/Buttons.png") center/cover;
-  padding: 15px 30px;
-  color: white;
-  font-family: "Press Start 2P";
+/* Label under the home card */
+.footer-label {
+  margin-top: 26px;
   font-size: 14px;
-  margin-top: 30px;
 }
 
-.link-btn:hover {
-  filter: brightness(1.2);
+/* =========================================
+   PROJECT MEDIA AND DESCRIPTION BOXES
+   ========================================= */
+
+/* Column containing images or special frames */
+.project-media {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
 }
 
-/* ------------------------------
-   PICTURE FRAME SYSTEM
---------------------------------*/
+/* Standard project image styling */
+.project-media > img {
+  max-width: 100%;
+  width: 420px;
+  border-radius: 12px;
+}
 
+/* Description boxes using Box.png */
+.desc-box {
+  flex: 1 1 50%;
+  padding: 28px 30px;
+  background: url("Media/Box.png") center/cover no-repeat;
+  border-radius: 10px;
+}
+
+/* =========================================
+   PICTURE FRAME FOR COMIC AND FILM
+   ========================================= */
+
+/* Wrapper that holds Picture.png and four images inside it */
 .picture-frame {
   position: relative;
-  width: 750px;
-  max-width: 95%;
-  margin: 40px auto;
+  max-width: 520px;
+  width: 100%;
 }
 
+/* Background frame image */
 .frame-bg {
   width: 100%;
   display: block;
 }
 
+/* Grid area aligned to the inner squares of Picture.png */
 .frame-grid {
   position: absolute;
-  top: 12%;
+  top: 8%;
   left: 7%;
   width: 86%;
-  height: 78%;
+  height: 86%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* Each image inside the Picture.png squares */
+.frame-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* =========================================
+   SOUND PROJECT BLOOPERS PANEL
+   ========================================= */
+
+/* Wrapper for the image and audio controls */
+.bloopers-wrapper {
+  width: 420px;
+  max-width: 100%;
+}
+
+/* Main bloopers still image */
+.bloopers-image {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Text label and buttons under the image */
+.bloopers-controls {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.bloopers-label {
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Play / Pause buttons */
+.audio-controls {
+  display: flex;
+  justify-content: center;
   gap: 18px;
 }
 
-.frame-item {
-  width: 100%;
-  cursor: pointer;
+.btn-round {
+  padding: 8px 20px;
   border-radius: 6px;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 12px;
+  border: 2px solid #ffffff;
+  background-color: #00000080;
+  color: #ffffff;
+  cursor: pointer;
 }
 
-/* ------------------------------
-   IMAGE MODAL
---------------------------------*/
+.btn-round:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
 
+/* =========================================
+   PROJECT LINK BUTTONS
+   ========================================= */
+
+/* Minecraft-style button strip for links */
+.link-btn {
+  margin-top: 32px;
+  padding: 14px 32px;
+  background: url("Media/Buttons.png") center/cover no-repeat;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.link-btn:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   SCROLLING CHICKEN
+   ========================================= */
+
+/* Chicken that moves up and down with scroll on the right */
+.scroll-chicken {
+  position: fixed;
+  right: 18px;
+  width: 130px;
+  z-index: 900;
+  top: 10%;
+}
+
+/* =========================================
+   IMAGE ZOOM MODAL
+   ========================================= */
+
+/* Overlay for zoom effect */
 .modal {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
-  z-index: 9999;
-  text-align: center;
-  padding-top: 80px;
-}
-
-.modal-content {
-  max-width: 80%;
-  border-radius: 10px;
-}
-
-#closeModal {
-  color: white;
-  position: absolute;
-  top: 30px;
-  right: 50px;
-  font-size: 40px;
-  cursor: pointer;
-}
-
-/* ------------------------------
-   BLOOPERS PANEL
---------------------------------*/
-
-.bloopers-wrapper {
-  width: 600px;
-  max-width: 90%;
-  margin: auto;
-}
-
-.bloopers-image {
-  width: 100%;
-}
-
-.bloopers-title {
-  font-family: "Press Start 2P";
-  color: white;
-  margin-top: 20px;
-}
-
-.audio-controls {
-  margin-top: 10px;
-}
-
-.btn-round {
-  padding: 10px 22px;
-  font-family: "Press Start 2P";
-  margin: 0 10px;
-}
-
-/* ------------------------------
-   CHICKEN ANIMATIONS
---------------------------------*/
-
-.scroll-chicken {
-  position: fixed;
-  right: 20px;
-  width: 120px;
-  top: 10%;
+  background: rgba(0, 0, 0, 0.65);
   z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.top-chicken {
-  position: absolute;
-  top: 160px;
-  width: 140px;
-  animation: bounce 3s infinite ease-in-out;
-  left: calc(50% - 70px);
+/* Zoomed image (not full screen) */
+.modal-content {
+  max-width: 60%;
+  max-height: 70%;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  transform: scale(0.9);
+  transition: transform 0.15s ease-out;
 }
 
-@keyframes bounce {
-  0% { transform: translateX(-50px); }
-  50% { transform: translateX(50px); }
-  100% { transform: translateX(-50px); }
+/* Show as slightly bigger when modal is visible */
+.modal.show .modal-content {
+  transform: scale(1);
+}
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================= */
+
+@media (max-width: 900px) {
+  .nav-inner {
+    gap: 1.2rem;
+    padding-inline: 10px;
+  }
+
+  .section-content {
+    flex-direction: column;
+  }
+
+  .home-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-box .text-overlay {
+    margin-top: 10px;
+  }
+
+  .scroll-chicken {
+    width: 110px;
+  }
+}
+
+@media (max-width: 600px) {
+  .minecraft-3d {
+    font-size: 30px;
+  }
+
+  .nav-inner {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .text-overlay {
+    font-size: 16px;
+  }
+
+  .desc-box {
+    padding: 22px 20px;
+  }
+
+  .modal-content {
+    max-width: 80%;
+  }
 }
