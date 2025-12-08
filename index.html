@@ -114,11 +114,12 @@
       </a>
     </section>
 
-    <!-- SOUND PROJECT SECTION: sound image left, description right -->
+    <!-- SOUND PROJECT SECTION: big Box background, sound image left, description right -->
     <section id="sound" class="full-section project-section">
       <h2 class="section-heading minecraft-3d">SOUND PROJECT</h2>
 
-      <div class="section-content">
+      <!-- Whole row sits on one big Box.png background -->
+      <div class="section-content sound-row">
         <!-- Bloopers art and audio player on the left -->
         <div class="project-media">
           <div class="bloopers-wrapper">
@@ -126,6 +127,11 @@
 
             <div class="bloopers-controls">
               <p class="bloopers-label">Bloopers</p>
+
+              <div class="audio-buttons">
+                <button id="playBtn" class="btn-round">Play</button>
+                <button id="pauseBtn" class="btn-round">Pause</button>
+              </div>
 
               <!-- Native audio bar visible -->
               <audio
@@ -138,7 +144,7 @@
           </div>
         </div>
 
-        <!-- Sound project description on a larger Box.png -->
+        <!-- Sound project description on a 3D Box.png -->
         <div class="desc-box text-overlay sound-desc-box">
           <p>
             “Girl Talk: Real Conversations, Real Women” is a podcast-style project where friends
